@@ -15,8 +15,6 @@ public class Lanzador {
         PSP es programación.
         """;
 
-    public static final String TEXT = "Linea psp";
-
     public static void main(String[] args) throws Exception {
         Process p = Runtime.getRuntime().exec("grep PSP");
         PrintWriter pw = new PrintWriter(new OutputStreamWriter(p.getOutputStream()));
@@ -25,7 +23,6 @@ public class Lanzador {
         pw.close();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        System.out.println(TEXT);
 
         String linea;
         while ((linea = br.readLine()) != null) {

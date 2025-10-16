@@ -37,7 +37,6 @@
                 PSP es programación.
                 """;
 
-            public static final String TEXT = "Linea psp";
 
             public static void main(String[] args) throws Exception {
                 Process p = Runtime.getRuntime().exec("grep PSP");
@@ -47,7 +46,6 @@
                 pw.close();
 
                 BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-                System.out.println(TEXT);
 
                 String linea;
                 while ((linea = br.readLine()) != null) {
@@ -59,9 +57,8 @@
 ## Explicacion de codigo Lanzador.java
 
 ### Constantes
-- En esta parte explicare por que he realizado las dos contasntes que estan abajo.
+- En esta parte explicare por que he realizado la contasnte que esta abajo.
   - La constante llamada **TEXTO** es la que tiene que leer el programa para que saque todas las lineas que contenga la palabra PSP y como es un string que tiene varias lineas creamos dicha constante tambien llamada text block.
-  - La segunda constante llamada **text** la he creado para poner un texto y que no sea hardcode.
     ``` java 
     public class Lanzador {
 
@@ -73,7 +70,6 @@
         PSP es programación.
         """;
 
-    public static final String TEXT = "Linea psp";
 
     ```
 ### Main
@@ -89,7 +85,6 @@
         pw.close();
         
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        System.out.println(TEXT);
 
 ```
 > Una vez que finalizamos el proceso cerramos el printWriter
@@ -104,3 +99,5 @@ Por ultimo crearemos el bucle para que lea todas las lineas de la constante **TE
         System.out.println(linea);
     }
 ```
+### Link de mi GitHub
+- https://github.com/Sancha-aesthetic/grep
